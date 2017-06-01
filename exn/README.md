@@ -23,9 +23,7 @@ Sabe-se que as sequências `xa(n)` e `xb(n)` resultaram da amostragem de dois si
 	xtriang=x.*triang(N)'*N/sum(triang(N));
 	```
 3. Faça a `fft` para uma das sequências janeladas com `N` pontos.
-4. Visualize o módulo de cada uma das `fft`s. Para facilitar a comparação, crie a tela gráfica `figure(2)` e divida-a em 4 linhas e 1 coluna com o comando `subplot`.
 
-	Use os fatores de escala adequados para ler diretamente no eixo das abscissas as frequências cíclicas (em Hz) e no eixo das ordenadas o valor da magnitude do sinal.
     **Resposta:**
     
     ```Matlab
@@ -34,10 +32,11 @@ Sabe-se que as sequências `xa(n)` e `xb(n)` resultaram da amostragem de dois si
 	out_blac = fft(xblac, N);
 	out_tria = fft(xtriang, N);
 	```
-5. A partir dessas figuras, estime os valores das componentes senoidais que formam o sinal de tempo contínuo correspondente à sequência `xa(n)`, ou seja,  `xa(t)`.
+4. Visualize o módulo de cada uma das `fft`s. Para facilitar a comparação, crie a tela gráfica `figure(2)` e divida-a em 4 linhas e 1 coluna com o comando `subplot`.
 
-	Na sua opinião, qual é o melhor resultado?
-    **Resposta:**
+	Use os fatores de escala adequados para ler diretamente no eixo das abscissas as frequências cíclicas (em Hz) e no eixo das ordenadas o valor da magnitude do sinal.
+    
+     **Resposta:**
     
     ```Matlab
 	w = (fs/N)*n;
@@ -57,6 +56,13 @@ Sabe-se que as sequências `xa(n)` e `xb(n)` resultaram da amostragem de dois si
     xlabel('f(Hz)')
 	```
     ![fft1](img/fft1.jpg)
+
+5. A partir dessas figuras, estime os valores das componentes senoidais que formam o sinal de tempo contínuo correspondente à sequência `xa(n)`, ou seja,  `xa(t)`.
+
+	Na sua opinião, qual é o melhor resultado?
+    
+    **Resposta:**
+   
     Como podemos ver pela imagem acima (ajustei o intervalo de `f` para que seja apresentadas apenas amostras de frequências inferiores a `fs/2`) a provável forma do sinal `xa(t)` é `xa(t) = cos(2*pi*60[Hz]*t) + 0.2*cos(2*pi*70[Hz]*t)`.
     O melhor resultado para detecção da frequência de maior amplitude (`60[Hz]`) foi do fft com a janela retangular, pois gerou os menores lóbulos secundários. Já para a frequência de de menor amplitude (`70[Hz]`) o melhor resultado foram os da janela de Hamming e da triangular, pois deixaram mais evidente que essa frequência não é só um lóbulo secundário da frequência dominante.
     
