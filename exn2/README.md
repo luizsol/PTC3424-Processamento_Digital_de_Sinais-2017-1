@@ -140,7 +140,7 @@ title('yL(n)')
 
 ![](img/1-figure3.jpg)
 
-___TODO___
+Temos que `y30(n)` e `yL(n)` nada mais são que convoluções circulares de `xa(n)` e `xb(n)` com mais pontos.
 
 ## 2)
 Figure 1 illustrates a six-point discrete-time sequence x[n]. Assume that x[n] is zero outside the interval shown.
@@ -164,11 +164,13 @@ ___TODO___
 ## 3)
 A problem that often arises in practice is one in which a distorted signal `y[n]` is the output that results when a desired signal `x[n]` has been filtered by an LTI system. We wish to recover the original signal `x[n]` by processing `y[n]`. In theory, `x[n]` can be recovered from `y[n]` by passing `y[n]` through an inverse filter having a system function equal to the reciprocal of the system function of the distorting filter.
 
-Suppose that the distortion is caused by an FIR filter with impulse response
+
+Suppose that the distortion is caused by an FIR filter with impulse response
 
 ![](img/img4.png)
 
-where `n_0` is a positive integer, i.e., the distortion of `x[n]` takes the form of an echo at delay `n_0`.
+
+where `n_0` is a positive integer, i.e., the distortion of `x[n]` takes the form of an echo at delay `n_0`.
 
 ### a)
 Determine the z-transform `H(z)` and the N-point DFT `H[k]` of the impulse response `h[n]`. Assume that `N = 4*n_0`.
@@ -188,14 +190,16 @@ ___TODO___
 Suppose that we use an FIR filter of length N in an attempt to implement the inverse filter, and let the N-point DFT of the FIR filter be
 
 `G[k] = 1/H[k], k = 0, 1, ..., N - 1`
-What is the impulse response `g[n]` of the FIR filter?
+
+What is the impulse response `g[n]` of the FIR filter?
 
 __Resposta__:
 
 ___TODO___
 
 ### d)
-It might appear that the FIR filter with DFT `G[k] = 1/H[k]` implements the inversefilter perfectly. After all, one might argue that the FIR distorting filter has an N-point DFT `H[k]` and the FIR filter in cascade has an N-point DFT `G[k] = 1/H[k]`, and since `G[k]H[k] = 1` for all `k`, we have implemented an all-pass, nondistorting filter. Briefly explain the fallacy in this argument.
+It might appear that the FIR filter with DFT `G[k] = 1/H[k]` implements the inverse
+filter perfectly. After all, one might argue that the FIR distorting filter has an N-point DFT `H[k]` and the FIR filter in cascade has an N-point DFT `G[k] = 1/H[k]`, and since `G[k]H[k] = 1` for all `k`, we have implemented an all-pass, nondistorting filter. Briefly explain the fallacy in this argument.
 
 __Resposta__:
 
