@@ -157,9 +157,19 @@ The four-point sequence `x1[n]` that results from taking the four-point inverse 
 
 __Resposta__:
 
-Vamos iniciar a solução desse problema determinando `X1[k]`, que é a DFT de `x1[n]`:
+Como não houve truncamento em nenhuma das transformações de `x[n]` para `x1[n]` vale o Teorema de Parseval, ou seja, a potência `Px` do sinal `x[n]` deve ser igual à potência `Px1` do sinal `x1[n]`, portanto:
 
-___TODO___
+```matlab
+x = [1.0, 0, 2.0, 2.0, 1.0]
+x1 = [4.0, 1.0, 2.0, 2.0];
+
+Px = x*x';
+Px1 = x1*x1';
+b = sqrt(Px1 - Px)
+```
+
+`b = 3.87`
+
 
 ## 3)
 A problem that often arises in practice is one in which a distorted signal `y[n]` is the output that results when a desired signal `x[n]` has been filtered by an LTI system. We wish to recover the original signal `x[n]` by processing `y[n]`. In theory, `x[n]` can be recovered from `y[n]` by passing `y[n]` through an inverse filter having a system function equal to the reciprocal of the system function of the distorting filter.
@@ -177,14 +187,30 @@ Determine the z-transform `H(z)` and the N-point DFT `H[k]` of the impulse respo
 
 __Resposta__:
 
-___TODO___
+![](img/eq2.gif)
+![](img/eq3.gif)
+
 
 ### b)
-Let `Hi(z)` denote the system function of the inverse filter, and let `h_i[n]` be the corresponding impulse response. Determine `h_i[n]`. Is this an FIR or an IIR filter? What is the duration of `h_i[n]`?
+Let `H_i(z)` denote the system function of the inverse filter, and let `h_i[n]` be the corresponding impulse response. Determine `h_i[n]`. Is this an FIR or an IIR filter? What is the duration of `h_i[n]`?
 
 __Resposta__:
 
-___TODO___
+Como `H_i(z)` é `1/H(z)` e `H(z)` é, por sua vez uma constante não nula, temos que `H_i(z)` também será uma constante não nula, logo um filtro FIR. Portanto `h_i(z)` será da forma:
+
+![](img/eq4.gif)
+
+e a sua respectiva `H_i(z)` da forma:
+
+![](img/eq5.gif)
+
+Mas como:
+
+![](img/eq6.gif)
+
+temos que:
+
+![](img/eq7.gif)
 
 ### c)
 Suppose that we use an FIR filter of length N in an attempt to implement the inverse filter, and let the N-point DFT of the FIR filter be
@@ -195,7 +221,9 @@ What is the impulse response `g[n]` of the FIR filter?
 
 __Resposta__:
 
-___TODO___
+![](img/eq8.gif)
+
+(não sei como resolver analiticamente essa equação `:(` )
 
 ### d)
 It might appear that the FIR filter with DFT `G[k] = 1/H[k]` implements the inverse
@@ -203,11 +231,11 @@ filter perfectly. After all, one might argue that the FIR distorting filter has 
 
 __Resposta__:
 
-___TODO___
+___?___
 
 ### e)
 Perform the convolution of `g[n]` with `h[n]`,and thus determine how well the FIR filter with N-point DFT `G[k] = 1/H[k]` implements the inverse filter.
 
 __Resposta__:
 
-___TODO___
+___?___
