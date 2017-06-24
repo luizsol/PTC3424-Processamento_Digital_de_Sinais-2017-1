@@ -4,18 +4,18 @@
 * Professora: [Maria D. Miranda](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?metodo=apresentar&id=K4787453A9) ([maria@lcs.poli.usp.br](maria@lcs.poli.usp.br))
 * Data: 1º semestre de 2017
 
-## Materiais do curso
+## Informações e materiais da disciplina
 * [Informações sobre o curso PTC3424](files/PTC3424_2017A.pdf)
 
 ### Gabaritos
 #### Testes
-* [Teste 1](files/Gabarito_Testinho_1-PTC-3424.pdf)
-* [Teste 2](files/Gabarito_Testinho_2-PTC-3424.pdf)
-* [Teste 3](files/Gabarito_Testinho_3-PTC-3424.pdf)
+* [Teste 1](files/Gabarito_Testinho_1-PTC-3424.pdf) | Média da turma: 7,1
+* [Teste 2](files/Gabarito_Testinho_2-PTC-3424.pdf) | Média da turma: 6,3
+* [Teste 3](files/Gabarito_Testinho_3-PTC-3424.pdf) | Média da turma: 4,5
 
 #### Provas
-* [Prova 1](files/Gabarito_P1_PTC3424_2017.pdf)
-* [Enunciado Prova 2](files/P2_2017.pdf) | [Gabarito Prova 2](files/p2g.pdf) | [Formulário Prova 2](files/FormularioP2_2017.pdf)
+* [Prova 1](files/Gabarito_P1_PTC3424_2017.pdf) | Média da turma: 6,6
+* [Enunciado Prova 2](files/P2_2017.pdf) | [Gabarito Prova 2](files/p2g.pdf) | [Formulário Prova 2](files/FormularioP2_2017.pdf) | Média da turma: 3,4
 
 ## Introdução
 * [Introdução](files/Primeira_aula_motivacao_2016_2.pdf)
