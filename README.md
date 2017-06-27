@@ -16,6 +16,7 @@
 #### Provas
 * [Prova 1](files/Gabarito_P1_PTC3424_2017.pdf) | Média da turma: 6,6
 * [Enunciado Prova 2](files/P2_2017.pdf) | [Gabarito Prova 2](files/p2g.pdf) | [Formulário Prova 2](files/FormularioP2_2017.pdf) | Média da turma: 3,4
+* [Exercício Computacional Prova 3](files/EP4_2017.pdf) | Enunciado | [Resolução](EC5)
 
 ## Introdução
 * [Introdução](files/Primeira_aula_motivacao_2016_2.pdf)
